@@ -1,0 +1,47 @@
+html {
+
+	&.overflow-off {
+		overflow: hidden;
+		height: 100%;
+	}
+}
+#wrapper {
+	min-height: 100vh;
+	flex-direction: column;
+	.thb-full-menu-left-enabled & {
+		@include min-break($break-medium) {
+			padding-left: 300px;
+		}
+	}
+	.thb-full-menu-left-enabled.thb-menu-right & {
+		@include min-break($break-medium) {
+			padding-left: 0;
+			padding-right: 300px;
+		}
+	}
+}
+.row {
+	min-width: 100%;
+
+	&.max-width {
+		min-width: 0;
+	}
+	&.masonry-blog {
+		.columns {
+			@include min-break($break-medium) {
+				padding: 0 20px;
+			}
+		}
+	}
+	&.full-width-row {
+		max-width: none;
+
+		&.with-padding {
+			padding: 0 15px;
+
+			@include min-break($break-small) {
+				padding: 0 20px;
+			}
+		}
+	}
+}
