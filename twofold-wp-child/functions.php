@@ -24,3 +24,8 @@ function register_media_category_taxonomy() {
 
 }
 add_action('init', 'register_media_category_taxonomy');
+
+
+// DJ, Event, Location, Jahr für Alben und Fotos (inkl. digiKam-Import)
+require_once get_stylesheet_directory() . '/inc/technoid-photos.php';
+require_once get_stylesheet_directory() . '/inc/technoid-upload-dirs.php';
